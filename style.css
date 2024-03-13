@@ -12,6 +12,21 @@
     background-size: cover;
 }
 
+#top-background .mobile {
+    display: none;
+}
+#top-background .pc {
+    display: block;
+}
+@media (max-width:800px){
+    #top-background .pc {
+        display: none;
+    }
+    #top-background .mobile {
+        display: block;
+    }
+}
+
 .navbar-brand img {
     width: 100%;
 }
@@ -188,8 +203,18 @@
     justify-content: center;
 }
 .owner-img img{
+    width: 60%;
     border-radius: 50px;
+    padding: 10px;
     margin: auto;
+}
+@media (max-width:600px){
+    .owner-img img{
+        width: 100%;
+        border-radius: 50px;
+        padding: 10px;
+        margin: auto;
+    }
 }
 
 
