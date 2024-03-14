@@ -69,3 +69,38 @@ $(document).ready(function() {
 	});
 	
   });
+  $("#replay").click(function() {
+	var el = $(".text-pop-up-top"),
+		newone = el.clone(true);
+
+	el.before(newone);
+
+	$("." + el.attr("class") + ":last").remove();
+});
+const gallery = document.getElementById('gallery');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+gallery.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+});
+
+gallery.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+gallery.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+gallery.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 3; // Adjust the speed of scrolling
+    gallery.scrollLeft = scrollLeft - walk;
+});
