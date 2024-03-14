@@ -314,6 +314,7 @@
     font-size: 20px;
     padding: 2px;
     margin: 0px 10px;
+    transition: 1s;
 }
 
 #footer .footer-ul li a{
@@ -328,6 +329,7 @@
    color: white;
    padding: 2px;
    border-radius: 5px;
+   transition: 1s;
  }
 #footer .col-lg-4 img {
     width: 200px;
