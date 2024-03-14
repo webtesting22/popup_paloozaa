@@ -408,6 +408,12 @@
 /* #Parallax_Gallery{
     padding-bottom: 50px;
 } */
+#Parallax_Gallery .border-radius{
+    border-radius: 20px 0px 0px 0px;
+}
+#Parallax_Gallery .border-radius-end{
+    border-radius: 0px 0px 0px 20px;
+}
 @media (max-width:600px){
     .event-content p span{
         font-size: 1.3rem;
@@ -425,4 +431,10 @@
         margin: 20px auto;
     }
    
+    #Parallax_Gallery .border-radius{
+        border-radius: 0px 0px 0px 0px;
+    }
+    #Parallax_Gallery .border-radius-end{
+        border-radius: 0px 0px 0px 0px;
+    }
 }
