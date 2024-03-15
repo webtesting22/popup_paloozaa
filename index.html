@@ -593,7 +593,7 @@
 
     <script>
         function sendwhatsapp() {
-            var phonenumber = "+918308063687";
+            var phonenumber = "+919099884553";
             var name = document.querySelector(".name").value;
             var lname = document.querySelector(".lname").value;
             var email = document.querySelector(".email").value;
@@ -613,9 +613,9 @@
 
             // Check if the user is on an iOS device
             var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-            if (isIOS) {
-                alert("Tap 'Send' to confirm sending the message via WhatsApp");
-            }
+            // if (isIOS) {
+            //     alert("Tap 'Send' to confirm sending the message via WhatsApp");
+            // }
 
             window.open(url, '_blank').focus();
         }
