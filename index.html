@@ -593,26 +593,33 @@
 
     <script>
         function sendwhatsapp() {
-            var phonenumber = "+918308063687";
-            var name = document.querySelector(".name").value;
-            var lname = document.querySelector(".lname").value;
-            var email = document.querySelector(".email").value;
-            var categories = document.querySelector(".categories").value;
-            var phone = document.querySelector(".phone").value;
-            var message = document.querySelector(".massage").value; // Corrected class name
+    var phonenumber = "+918308063687";
+    var name = document.querySelector(".name").value;
+    var lname = document.querySelector(".lname").value;
+    var email = document.querySelector(".email").value;
+    var categories = document.querySelector(".categories").value;
+    var phone = document.querySelector(".phone").value;
+    var message = document.querySelector(".massage").value; // Corrected class name
 
-            var url = "https://wa.me/" + phonenumber + "?text=" +
-                "1) Name : " + name + "%0a" +
-                "2) Last Name : " + lname + "%0a" +
-                "3) Email :* " + email + "%0a" +
-                "4) Categories: " + categories + "%0a" +
-                "5) Phone: " + phone + "%0a" +
-                "6) Message : " + message +
-                "%0a%0a" +
-                "Demo Example";
+    var url = "https://wa.me/" + phonenumber + "?text=" +
+        "1) Name : " + name + "%0a" +
+        "2) Last Name : " + lname + "%0a" +
+        "3) Email :* " + email + "%0a" +
+        "4) Categories: " + categories + "%0a" +
+        "5) Phone: " + phone + "%0a" +
+        "6) Message : " + message +
+        "%0a%0a" +
+        "Demo Example";
 
-            window.open(url, '_blank').focus();
-        }
+    // Check if the user is on an iOS device
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    if (isIOS) {
+        alert("Tap 'Send' to confirm sending the message via WhatsApp");
+    }
+
+    window.open(url, '_blank').focus();
+}
+
 
         AOS.init();
     </script>
