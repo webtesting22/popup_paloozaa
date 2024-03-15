@@ -989,6 +989,27 @@ br {
     background-attachment: fixed;
 }
 
+ /* WebKit-based browsers */
+ .Gallery::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    border-radius: 50%;
+}
+
+.Gallery::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.Gallery::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 50%; /* Rounded corners */
+}
+
+/* For Firefox */
+.Gallery {
+    scrollbar-width: thin;
+    scrollbar-color: #b21d1fe7 rgb(255, 255, 255);
+ 
+}
 @media(max-width:600px) {
     .Gallery {
         display: flex;
@@ -1007,8 +1028,9 @@ br {
 }
 
 .Gallery img {
-    width: 390px;
+    width: 321px;
     border-radius: 30px;
+    margin: 0px 20px;
 }
 
 .Gallery div {
@@ -1017,4 +1039,8 @@ br {
 .Icon-heading{
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
+}
+#gallery div{
+    display: flex;
+    align-items: center;
 }
