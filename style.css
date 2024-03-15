@@ -430,7 +430,7 @@
 
 .arrow-animation a {
     text-decoration: none;
-    color: #431F1C;
+    color: #ffffff;
 }
 
 .event-content p span {
@@ -1043,4 +1043,25 @@ br {
 #gallery div{
     display: flex;
     align-items: center;
+}
+.demo-gallery{
+    padding: 3rem 0rem;
+}
+.demo-gallery img{
+    width: 100%;
+}
+.owner-image img{
+    width: 100%;
+}
+.owner-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width:600px) and (max-width:1000px){
+   
+    .owner-image img{
+        width: 60%;
+        padding-bottom: 20px;
+    }
 }
