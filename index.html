@@ -32,13 +32,13 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#Parallax_Gallery">Gallery</a>
+                                    <a class="nav-link active" aria-current="page" href="#demo-gallery">Gallery</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#Owner-Info">About</a>
+                                    <a class="nav-link" href="#owner-info">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
+                                    <a class="nav-link" href="#footer">Contact</a>
                                 </li>
 
                         </div>
@@ -46,13 +46,17 @@
                 </nav>
             </header>
 
-            <div class="home-page-overlay">
+            <!-- <div class="home-page-overlay">
 
 
-            </div>
-            <img src="./Images/top-back.png" class="backimg pc" alt="">
-            <img src="./Images/top-back.png" class="backimg mobile" alt="">
-            <div class="main-heading-home-top">
+            </div> -->
+            <video autoplay muted loop id="myVideo" class="w-100">
+                <source src="./Images/back-video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <!-- <img src="./Images/top-back.png" class="backimg pc" alt=""> -->
+            <!-- <img src="./Images/top-back.png" class="backimg mobile" alt=""> -->
+            <!-- <div class="main-heading-home-top">
 
                 <div class="containerrrr">
                     <span class="welcome">Coming&nbsp;Soon...</span>
@@ -60,17 +64,17 @@
                 </div>
 
 
-            </div>
-            <div class="loading" data-loading-text="yükleniyor..."></div>
+            </div> -->
+            <!-- <div class="loading" data-loading-text="yükleniyor..."></div> -->
             <div class="bottom_header">
                 <div class="arrow-animation arrow text-white"><a href="#About-content"><i
                             class='bx bx-chevrons-down text-white'></i>Scroll&nbsp;Down</a></div>
-                <div class="text-white">
-                    <p> Ahmedabad</p>
+                <div class="text-white text-end">
+                    <span> Ahmedabad</span>
                     <br><br>
-                    <p> info@mysite.com</p>
+                    <span> info@mysite.com</span>
                     <br>
-                    <p>123-456-7890</p>
+                    <span>123-456-7890</span>
                 </div>
             </div>
         </div>
@@ -100,7 +104,7 @@
         <div class="About-content" id="About-content">
             <div class="categories container" data-aos="fade-up" data-aos-duration="3000">
                 <div class="row w-100 m-auto">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 col-xs-6">
                         <div class="icons-container">
                             <img src="./Images/43.png" alt="">
                             <h4 class="Icon-heading">Food</h4>
@@ -303,8 +307,40 @@
 
             </div>
         </div> -->
-        <div class="demo-gallery container">
-            <div class="row">
+
+
+        <div class="img-popup">
+            <img src="" alt="Popup Image">
+            <div class="close-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="demo-gallery" id="demo-gallery">
+            <div class="main-gallery-container">
+                <div class="both-images">
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1000"><img
+                            src="./Images/1.jpeg" alt=""></div>
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1500"><img
+                            src="./Images/3.jpeg" alt=""></div>
+                </div>
+                <div class="single-image">
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1500">
+                        <img src="./Images/2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="both-images">
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1500"><img
+                            src="./Images/4.jpeg" alt=""></div>
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1500"><img
+                            src="./Images/5.jpeg" alt=""></div>
+                </div>
+                <div class="single-image">
+                    <div class="container__img-holder" data-aos="fade-up" data-aos-duration="1500"><img
+                            src="./Images/6.jpeg" alt=""></div>
+                </div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-lg-3 col-md-4 p-0"><img src="./Images/A Rosy Outlook.jpeg" alt=""></div>
                 <div class="col-lg-3 col-md-4 p-0"><img src="./Images/Full Naturals - Santa Lolla.jpeg" alt=""></div>
                 <div class="col-lg-3 col-md-4  p-0"><img src="./Images/Galletas.jpeg" alt=""></div>
@@ -312,7 +348,7 @@
                 <div class="col-lg-3 col-md-4  p-0"><img src="./Images/Home Decoration Ideas.jpeg" alt=""></div>
                 <div class="col-lg-3 col-md-4  p-0"><img src="./Images/Storage baskets.jpeg" alt=""></div>
                 <div class="col-lg-3 col-md-4  p-0"><img src="./Images/TRAVEL.jpeg" alt=""></div>
-            </div>
+            </div> -->
 
         </div>
         <!-- <div class="Gallery" id="gallery">
@@ -326,11 +362,13 @@
             <div><img src="./Images/TRAVEL.jpeg" alt=""></div>
 
         </div> -->
-        <div class="owner-info ">
+        <div class="owner-info " id="owner-info">
             <div class="row container m-auto pt-5">
                 <div class="col-lg-8 col-mg-12">
-                    <h1 class="mb-5">Our Story...</h1>
-                    <p>Popup Palooza is the brainchild of <b>Astha Sanghvi & Aksha Shah</b>, a dynamic duo. Astha, a fashion
+                    <h1 class="mb-4">Our Story...</h1>
+                    <p>
+                        Popup Palooza is the brainchild of <b>Astha Sanghvi & Aksha Shah</b>, a dynamic duo. Astha, a
+                        fashion
                         designer herself, possesses a keen eye for fashion and styling, while Aksha leads one of
                         Ahmedabad's most esteemed media houses, boasting a vast network within society.
 
@@ -355,7 +393,7 @@
 
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-12 owner-image" >
+                <div class="col-lg-4 col-md-12 owner-image">
                     <img src="./Popup Palooza (2).png" alt="">
                 </div>
 
@@ -428,9 +466,54 @@
             </div>
 
         </div> -->
-        <div class="brand-name">
+        <div class="container" id="contactUs">
+            <div class="row p-4" style="border: 2px solid rgba(237, 194, 191, 0.39);border-radius: 5px;">
+                <div class="col-lg-4" style="background-color: rgb(237 194 191); display: flex;
+                align-items: center; border-radius: 5px;"><img
+                        src="./Images/contact us.png"
+                        style="width: 100%;" alt=""></div>
+                <div class="col-lg-8">
+                    <form action="">
+                        <h3 style="color: #431F1C;">Leave us a message and we’ll get back to you.</h3>
+                        <div class="row mt-5">
+                            <div class="col-lg-6">
+                                <label for="">Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="">Company</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <label for="">Email Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <label for="">Phone Number</label>
+                                <input type="number" class="form-control">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <label for="">Categories</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">Food</option>
+                                    <option value="2">Lifestyle</option>
+                                    <option value="3">Home Decor</option>
+                                    <option value="3">Athleisure & sports gear</option>
+                                    <option value="3">Fragrance</option>
+                                    <option value="3">Fashion</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <label for="">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
+                            </div>
+                        </div>
 
+                    </form>
+                </div>
+            </div>
         </div>
         <Footer id="footer">
 
@@ -439,12 +522,13 @@
                     <p> 500 Terry Francine Street<br>
                         San Francisco, CA 94158</p>
 
-                    <p> info@mysite.com <br>
+                    <p> <a href="">popup.palooza.amd@gmail.com</a> <br>
                         123-456-7890</p>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <ul class="footer-ul">
-                        <li><a href=""><i class='bx bxl-instagram'></i>Instagram</a></li>
+                        <li><a href="https://www.instagram.com/popup_paloozaa/?igsh=MWxoaHUwdXpvMGZjZQ%3D%3D"><i
+                                    class='bx bxl-instagram'></i>Instagram</a></li>
 
                         <li><a href=""><i class='bx bxl-linkedin-square'></i>LinkedIn</a></li>
 

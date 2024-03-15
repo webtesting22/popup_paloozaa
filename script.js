@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const navbarHeight = document.querySelector("#navbar-container").offsetHeight;
                 const fromTop = window.pageYOffset || document.documentElement.scrollTop;
                 const toTop = targetElement.getBoundingClientRect().top + fromTop - navbarHeight;
-                scrollToSmoothly(toTop, 1000); // 1000 milliseconds = 1 second
+                scrollToSmoothly(toTop, 500); // 1000 milliseconds = 1 second
             }
         });
     });
@@ -104,3 +104,28 @@ gallery.addEventListener('mousemove', (e) => {
     const walk = (x - startX) * 3; // Adjust the speed of scrolling
     gallery.scrollLeft = scrollLeft - walk;
 });
+$(document).ready(function() {
+
+    // required elements
+    var imgPopup = $('.img-popup');
+    var imgCont  = $('.container__img-holder');
+    var popupImage = $('.img-popup img');
+    var closeBtn = $('.close-btn');
+  
+    // handle events
+    imgCont.on('click', function() {
+      var img_src = $(this).children('img').attr('src');
+      imgPopup.children('img').attr('src', img_src);
+      imgPopup.addClass('opened');
+    });
+  
+    $(imgPopup, closeBtn).on('click', function() {
+      imgPopup.removeClass('opened');
+      imgPopup.children('img').attr('src', '');
+    });
+  
+    popupImage.on('click', function(e) {
+      e.stopPropagation();
+    });
+    
+  });
