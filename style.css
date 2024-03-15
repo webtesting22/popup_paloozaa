@@ -101,9 +101,9 @@
     border-radius: 0px;
     width: 100%;
     padding: 0.5rem 4rem;
-    background-color: rgba(255, 255, 255, 0.185);
+    background-color: #ffeded7a;
     /* Adjust the alpha (transparency) value as needed */
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
     /* Adjust the blur radius as needed */
 }
 
@@ -117,7 +117,7 @@
         border-radius: 0px;
         width: 100%;
         padding: 0.5rem 2rem;
-        background-color: rgb(237, 194, 191);
+        background-color: #FFEDED;
         /* Adjust the alpha (transparency) value as needed */
         backdrop-filter: blur(1px);
         /* Adjust the blur radius as needed */
