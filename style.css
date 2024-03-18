@@ -1153,9 +1153,10 @@ br {
     display: flex;
     flex-direction: column;
   }
-  #contactUs .col-lg-6 label
+  #contactUs .col-lg-6 label,
   #contactUs .col-lg-12 label{
     margin: 4px 0px;
+    font-weight: 600;
   }
   .submit-btn{
     margin: 20px 0px;

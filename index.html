@@ -476,7 +476,7 @@
                         <h3 style="color: #431F1C;">Leave us a message and we’ll get back to you.</h3>
                         <div class="row mt-5">
                             <div class="col-lg-6">
-                                <label for="">Name</label>
+                                <label for="">First Name</label>
                                 <input type="text" class="form-control name" id="name">
                             </div>
                             <div class="col-lg-6">
@@ -493,16 +493,27 @@
                             </div>
                             <div class="col-lg-12 mt-3">
                                 <label for="">Categories</label>
-                                <select class="form-select categories" id="categories"
-                                    aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">Food</option>
-                                    <option value="2">Lifestyle</option>
-                                    <option value="3">Home Decor</option>
-                                    <option value="3">Athleisure & sports gear</option>
-                                    <option value="3">Fragrance</option>
-                                    <option value="3">Fashion</option>
-                                </select>
+                                <div class="d-flex">
+                                    <input type="checkbox" class="category" value="Food">&nbsp;&nbsp;Food<br>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="category" value="Lifestyle">&nbsp;&nbsp;Lifestyle<br>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="category" value="Home Decor">&nbsp;&nbsp;Home
+                                    Decor<br>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="category"
+                                        value="Athleisure & sports gear">&nbsp;&nbsp;Athleisure &
+                                    sports gear<br>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="category" value="Fragrance">&nbsp;&nbsp;Fragrance<br>
+                                </div>
+
+
+
                             </div>
                             <div class="col-lg-12 mt-3">
                                 <label for="">Message</label>
@@ -552,7 +563,7 @@
 
                         <!-- <li><a href=""><i class='bx bxl-linkedin-square'></i>LinkedIn</a></li> -->
 
-                        <li><a href=""><i class='bx bxl-whatsapp'></i>Whatsapp</a></li>
+                        <li><a href="https://wa.me/+917383898296"><i class='bx bxl-whatsapp'></i>Whatsapp</a></li>
 
                         <!-- <li><a href=""><i class='bx bxl-facebook-circle'></i>Facebook</a></li> -->
                     </ul>
@@ -593,32 +604,42 @@
 
     <script>
         function sendwhatsapp() {
-            var phonenumber = "+919099884553";
-            var name = document.querySelector(".name").value;
-            var lname = document.querySelector(".lname").value;
-            var email = document.querySelector(".email").value;
-            var categories = document.querySelector(".categories").value;
-            var phone = document.querySelector(".phone").value;
-            var message = document.querySelector(".massage").value; // Corrected class name
+            const categories = [];
 
-            var url = "https://wa.me/" + phonenumber + "?text=" +
+            // Get all checked checkboxes with class 'category'
+            const checkboxes = document.querySelectorAll('.category:checked');
+            checkboxes.forEach((checkbox) => {
+                categories.push(checkbox.value);
+            });
+
+            console.log('Selected categories:', categories);
+
+            // Rest of your code...
+            const phonenumber = "+919099884553";
+            const name = document.querySelector(".name").value;
+            const lname = document.querySelector(".lname").value;
+            const email = document.querySelector(".email").value;
+            const phone = document.querySelector(".phone").value;
+            const message = document.querySelector(".massage").value; // Corrected class name
+
+            const url = "https://wa.me/" + phonenumber + "?text=" +
                 "1) Name : " + name + "%0a" +
                 "2) Last Name : " + lname + "%0a" +
-                "3) Email :* " + email + "%0a" +
-                "4) Categories: " + categories + "%0a" +
+                "3) Email : " + email + "%0a" +
+                "4) Categories: " + categories.join(', ') + "%0a" + // Join categories with commas
                 "5) Phone: " + phone + "%0a" +
                 "6) Message : " + message +
-                "%0a%0a" +
-                "Demo Example";
+                "%0a%0a" + `Let me some details Selected Categories ${categories.join(', ')}`;
 
             // Check if the user is on an iOS device
-            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             // if (isIOS) {
             //     alert("Tap 'Send' to confirm sending the message via WhatsApp");
             // }
 
             window.open(url, '_blank').focus();
         }
+
 
 
         AOS.init();

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Example</title>
+</head>
+<body>
+  <!-- <label for="selectOption">Select an option:</label> -->
+  <select id="selectOption">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <script>
+    // Get the select element by its ID
+    const selectElement = document.getElementById('selectOption');
+
+    // Add an event listener to detect changes in the selected option
+    selectElement.addEventListener('change', (event) => {
+      // Log the selected value to the console
+      console.log('Selected value:', event.target.value);
+    });
+  </script>
+</body>
+</html>
