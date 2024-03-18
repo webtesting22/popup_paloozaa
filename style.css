@@ -1258,4 +1258,8 @@ br {
         margin: auto;
         margin: 20px 0px;
     }
+    .icons-container img{
+        width: 70%;
+        margin-bottom: 10px ;
+    }
 }
