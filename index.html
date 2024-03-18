@@ -17,19 +17,21 @@
 <body>
 
     <section class="main-section">
-
+        <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
+            <i class='bx bxl-whatsapp'></i>
+        </a>
         <div id="top-background">
             <header id="navbar-container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#" style="height: 25%;"><img src="./Popup Palooza (41).png"
+                        <a class="navbar-brand m-auto" href="#" style="height: 25%;"><img src="./Popup Palooza (41).png"
                                 alt=""></a>
-                        <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        <!-- <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        </button> -->
+                        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#demo-gallery">Gallery</a>
@@ -41,7 +43,7 @@
                                     <a class="nav-link" href="#footer">Contact</a>
                                 </li>
 
-                        </div>
+                        </div> -->
                     </div>
                 </nav>
             </header>
@@ -69,13 +71,13 @@
             <div class="bottom_header">
                 <div class="arrow-animation arrow text-white"><a href="#About-content"><i
                             class='bx bx-chevrons-down text-white'></i>Scroll&nbsp;Down</a></div>
-                <div class="text-white text-end">
+                <!-- <div class="text-white text-end">
                     <span> Ahmedabad</span>
                     <br><br>
                     <span> info@mysite.com</span>
                     <br>
                     <span>123-456-7890</span>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -101,45 +103,46 @@
 
             </div>
         </div> -->
-        <div class="About-content" id="About-content">
+        <div>
+           
             <div class="categories container" data-aos="fade-up" data-aos-duration="3000">
-                <div class="row w-100 m-auto">
-                    <div class="col-lg-4 col-md-6 col-xs-6">
+                <div class="row m-auto">
+                    <div class="col-lg-4 col-md-4 col-sm-4 ">
                         <div class="icons-container">
                             <img src="./Images/43.png" alt="">
                             <h4 class="Icon-heading">Food</h4>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="icons-container">
-                            <img src="./Images/46.png" alt="">
+                            <img src="./Images/46.png"  alt="">
                             <h4 class="Icon-heading">Lifestyle</h4>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="icons-container">
-                            <img src="./Images/47.png" alt="">
+                            <img src="./Images/47.png"  alt="">
                             <h4 class="Icon-heading">Home decor</h4>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="icons-container">
                             <img src="./Images/48.png" alt="">
                             <h4 class="Icon-heading">Athleisure & sports gear</h4>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="icons-container">
                             <img src="./Images/49.png" alt="">
                             <h4 class="Icon-heading">Fragrance </h4>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="icons-container">
                             <img src="./Images/Popup Palooza (1).png" alt="">
                             <h4 class="Icon-heading">PP Fashion</h4>
@@ -380,8 +383,11 @@
                         literary and lifestyle scene. Our brand pledges an unmatched experience, seamlessly blending
                         literature, art, and exclusive offerings, inviting you to transition from a passive observer to
                         an active participant in a realm of creativity and refinement.
+                        <br><br>
 
-                        Each of our trunk shows is meticulously curated to showcase unique and unconventional clothing
+
+                    </p>
+                    <p> Each of our trunk shows is meticulously curated to showcase unique and unconventional clothing
                         and lifestyle brands, alongside beloved cafes, bridging the gap between aspiration and
                         accessibility, and offering a glimpse into the cultural richness found in various cities across
                         the country.
@@ -390,7 +396,6 @@
                         curated trunk shows throughout the year, each one promising to surpass the last in captivation.
                         With Popup Palooza, we're crafting a narrative that celebrates the essence of literature, style,
                         and community, welcoming you to join us on a journey to elevate Ahmedabad's cultural landscape.
-
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-12 owner-image">
@@ -639,8 +644,30 @@
 
             window.open(url, '_blank').focus();
         }
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
 
+        // Function to handle scroll behavior
+        function handleScroll() {
+            const anchorLink = document.querySelector('.btn-whatsapp-pulse');
 
+            if (isInViewport(anchorLink)) {
+                anchorLink.classList.add('show');
+            } else {
+                anchorLink.classList.remove('show');
+            }
+        }
+
+        // Add event listener for scroll event
+        window.addEventListener('scroll', handleScroll);
 
         AOS.init();
     </script>
